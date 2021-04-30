@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Hotel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+</head>
+<body >
+<!-- header  -->
+    <div class="header">
+              <!-- navbar -->
+              <div class="d-flex c-navebar flex-column ">
+                <!-- topbar -->
+                <div class="topbar d-flex flex-wrap  ">
+                    <div class="item-group d-flex align-items-center mr-auto">
+                        <a class="c-n-item" href="LogIn.html"><i class="far fa-sign-in-alt ml-1 mr-1 icon"></i>LogIN/Register</a>
+                    </div>
+                    
+                    <div class="item-group d-flex align-items-center">
+                        <a class="c-n-item" href="#"><i class="far fa-envelope ml-1 mr-1 icon"></i>Hotel@service.com</a>
+                    </div>
+                    <div class="item-group d-flex align-items-center">
+                        <a class="c-n-item" href="#"><i class="far fa-phone-alt ml-1 mr-1 icon"></i>+213 698 690 085</a>
+                    </div>
+                </div>
+                <!-- end topbar  -->
+                <div class="d-flex flex-wrap flex-row justify-content-center ">
+                    <div class="item-group">
+                        <a class="c-n-item" href="Hotels.html "><i class="far fa-home ml-1 mr-1 icon"></i>Home</a>
+                    </div>
+                    <div class="item-group">
+                        <a class="c-n-item" href="# "><i class="far fa-hotel ml-1 mr-1 icon"></i>Hotels</a>
+                        <div class="c-n-i-dropDown">
+                            <a href="HotelDetails.html" class="list-group-item"><i class="far fa-hotel icon"></i> Hotel Detils  </a>
+                            <a href="addHotel.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Hotel </a>
+                            <a href="addRoom.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Room </a>
+                        </div>
+                    </div>
+                    <div class="item-group">
+                        <a class="c-n-item" href="Account.html"><i class="far fa-user ml-1 mr-1 icon"></i>Account</a>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- end navbar  -->
+        <div class="headerBG headerBGSlid"><img  src="img/hotelBG.jpg" alt=""></div>
+    </div>
+<!-- end header  -->
+ 
+<!-- body -->
+    <!-- map  -->
+    <div id="mapContainer" class="collapse">
+        <div id="map"></div>
+    </div>
+    <!-- end map  -->
+    <div class="container containerCost">
+        <div class="row">
+            <!-- left section  -->
+            <div class="col-md-3 col-sm-12 ">
+                <div class="map-btn mb-2">
+                    <!-- map btn  -->
+                    <button  type="submit" class="btn  bg-color-r" id="map-btn" >Map</button>
+                    <!-- end map btn  -->
+                </div>
+                <div class="search-btn">
+                    <!-- search btn  -->
+                    <button type="submit" class="btn  bg-color-g" id="search-btn" form="searchForm">Search</button>
+                    <!-- end search btn  -->
+                </div>
+                <!-- search -->
+                <div class="Acc searchAcc">
+                    <div class="AccH searchHead d-flex justify-content-between" data-toggle="collapse"   data-target="#search">
+                      <i class="far fa-search icon-color-red mr-3"></i><span> Search </span><span ><i class="far fa-minus icon-color-red"></i></span>
+                    </div>
+                    <div id="search" class="AccB searchBody show" >
+                        <!-- search form  -->
+                        <form accept="#" method="GET" id="searchForm">
+                            <!-- checkIn -->
+                            <div class="lable" ><i class="far fa-calendar-alt icon-color-red mr-3"></i> Check In </div>
+                            <div class="input-group">
+                              <input type="date" class="form-control" name="checkIn">
+                            </div>
+                            <!-- end checkIn -->
+                            <!-- checkOut -->
+                            <div class="lable" ><i class="far fa-calendar-alt icon-color-red mr-3"></i> Check Out </div>
+                            <div class="input-group  ">
+                              <input type="date" class="form-control" name="checkOut">
+                            </div>
+                            <!-- end checkOut -->
+                            <!-- rooms -->
+                            <div class="lable" ><i class="far fa-door-open icon-color-red mr-3"></i> Rooms  </div>
+                            <div class="input-group  room">
+                                <div class="input-group-prepend w-25 RM" id="RM">
+                                  <span class="input-group-text w-100"><i class="far fa-minus icon-color-red m-auto"></i></span>
+                                </div>
+                                <input type="text" class="form-control"  name="rooms" id="rooms" pattern="[0-9]+" readonly value="1">
+                                <div class="input-group-append w-25 RP" id="RP">
+                                    <span class="input-group-text w-100"><i class="far fa-plus icon-color-red m-auto"></i></span>
+                                </div>
+                            </div>
+                            <!-- end rooms  -->
+                            <!-- guests -->
+                            <div class="lable" ><i class="far fa-users icon-color-red mr-3"></i> Guests  </div>
+                            <div class="input-group  guests mb-3">
+                                <div class="input-group-prepend w-25 RM" id="GM">
+                                  <span class="input-group-text w-100"><i class="far fa-minus icon-color-red m-auto"></i></span>
+                                </div>
+                                <input type="text" class="form-control"  name="guests" id="guests" pattern="[0-9]+" readonly value="1" >
+                                <div class="input-group-append w-25 RP" id="GP">
+                                    <span class="input-group-text w-100"><i class="far fa-plus icon-color-red m-auto"></i></span>
+                                </div>
+                            </div>
+                            <!-- end guests -->
+                        </form> 
+                        <!-- end search form  -->
+                    </div>
+                  </div>
+                  <!-- search end -->
+                  <!-- filter  -->
+
+                  <div class="Acc filterAcc">
+                    <div class="AccH filterHead d-flex justify-content-between" data-toggle="collapse"   data-target="#filter">
+                      <i class="far fa-filter icon-color-red mr-3"></i><span> Filter </span><span ><i class="far fa-minus icon-color-red"></i></span>
+                    </div>
+
+                    <div id="filter" class="AccB filterBody" >
+                        <!-- price  -->
+                        <div class="filterPrice">
+                            <div class="lable" > Price </div>
+                            <div class="PriceSlider row">
+                                <div class="col col-sm-6 col-6">
+                                    <div class="lable text-center" > Min </div>
+                                </div>                                
+                                <div class="col col-sm-6 col-6">
+                                    <div class="lable text-center" > Max </div>
+                                </div>
+                            </div>
+                            <div class="PriceSlider row">
+                                <div class="col col-sm-6 col-6">
+                                    <div class="input-group  ">
+                                        <div class="input-group-prepend w-25 MiPM" id="RM">
+                                          <span class="input-group-text w-100"><i class="far fa-minus icon-color-red m-auto"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control"  readonly name="minPrice" id="minPrice" value="1" form="searchForm">
+                                        <div class="input-group-append w-25 MiPP" id="RP">
+                                            <span class="input-group-text w-100"><i class="far fa-plus icon-color-red m-auto"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6 col-6">
+                                    <div class="input-group ">
+                                        <div class="input-group-prepend w-25 MaPM" id="RM">
+                                          <span class="input-group-text w-100"><i class="far fa-minus icon-color-red m-auto"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" readonly  name="maxPrice" id="maxPrice"  value="1" form="searchForm">
+                                        <div class="input-group-append w-25 MaPP" id="RP">
+                                            <span class="input-group-text w-100"><i class="far fa-plus icon-color-red m-auto"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+ 
+                        </div>
+                        <!-- end price  -->
+                        <!-- stars  -->
+                        <div class="filterStars">
+                            <div class="lable" > Stars </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s0" name="stars" value="0" checked form="searchForm">
+                                <label for="s0">All</label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s1" name="stars" value="1" form="searchForm">
+                                <label for="s1">
+                                    <div>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s2" name="stars" value="2" form="searchForm">
+                                <label for="s2">
+                                    <div>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s3" name="stars" value="3" form="searchForm">
+                                <label for="s3">
+                                    <div>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s4" name="stars" value="4" form="searchForm">
+                                <label for="s4">
+                                    <div>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input type="radio" id="s5" name="stars" value="5" form="searchForm">
+                                <label for="s5">
+                                    <div>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end stars  -->
+                        <!-- facility  -->
+                        <div class="filterFacility">
+                            <div class="lable" > Facility </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="f1" name="facility" value="Bike" form="searchForm">
+                                <label for="f1">
+                                    <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                </label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="f2" name="facility" value="Bike" form="searchForm">
+                                <label for="f2">
+                                    <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                </label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="f3" name="facility" value="Bike" form="searchForm">
+                                <label for="f3">
+                                    <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                </label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="f4" name="facility" value="Bike" form="searchForm">
+                                <label for="f4">
+                                    <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                </label>
+                            </div>
+                            <div class="custom-checkbox">
+                                <input type="checkbox" id="f5" name="facility" value="Bike" form="searchForm">
+                                <label for="f5">
+                                    <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- end facility  -->
+
+                    </div>
+                  </div>
+
+                  <!-- end filter  -->
+
+            </div>
+            <!-- end left section  -->
+            <!-- right section  -->
+            <div class="col-md-9  col-sm-12">
+                <div class="row">
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/defualt.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >8.5</span>
+                                            </span>
+                                            <span class="review">15050 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1500</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+                    <!-- 
+                        ***********************
+                        ********************
+                        ***************
+                        *************
+                        *
+
+
+                      -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/login-bg.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >7.5</span>
+                                            </span>
+                                            <span class="review">35520 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>735</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/login-bg.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >10</span>
+                                            </span>
+                                            <span class="review">215059 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1150</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/defualt.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >8.5</span>
+                                            </span>
+                                            <span class="review">15050 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1500</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/login-bg.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >8.5</span>
+                                            </span>
+                                            <span class="review">15050 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1500</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/hotelBG.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >8.5</span>
+                                            </span>
+                                            <span class="review">15050 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1500</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                    <!-- hotelContainer  -->
+                    <div class="col-md-6 ">
+                        <div class="hotelContainer">
+                            <div class="hotelImg">
+                                <a class="d-block" href="HotelDetails.html">
+                                    <img  class="img-thumbnail" src="img/defualt.jpg">
+                                    <div class=" overlay">
+                                        <div class="short_info">
+                                            <span class=" score fa-layers fa-fw d-inline-block " >
+                                                <i class="far fa-circle icon-color-red"></i>
+                                                <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11 " >8.5</span>
+                                            </span>
+                                            <span class="review">15050 reviews</span>
+                                            <ul class=" fa-ul">
+                                                <li><span class="fa-li"><i class="far fa-wifi"></i></span>List icons can do what</li>
+                                                <li><span class="fa-li"><i class="far fa-paw"></i></span>be used to</li>
+                                                <li><span class="fa-li"><i class="far fa-swimmer"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-glass-martini-alt"></i></span>in lists</li>
+                                                <li><span class="fa-li"><i class="far fa-bath"></i></span>replace bullets</li>
+                                                <li><span class="fa-li"><i class="far fa-utensils"></i></span>in lists</li>
+                                              </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="hotelContent row" >
+                                <div class="col-sm-8">
+                                    <h4>Hotel Title Here Play </h4>
+                                    <div class="rating  icon-color-red">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 price">
+                                    <span class="d-block">From / Night</span>
+                                        <strong class="">
+                                        <span>1500</span>
+                                        <span class="fa-layers icon-color-red">
+                                            <i class="fas fa-circle"></i>
+                                            <i class="fa-inverse far fa-dollar-sign" data-fa-transform="shrink-5" ></i>
+                                        </span>
+                                        </strong>
+                                    </span>
+                                      
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- end hotelContainer  -->
+                                   <!-- 
+                        ***********************
+                        ********************
+                        ***************
+                        *************
+                        *
+                        
+
+                      -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- end right section  -->
+        </div>
+    </div>
+<!-- end body -->
+ 
+<!-- footer  -->
+    <div class="footer">
+        <div class="container">
+            <!-- footer links  -->
+            <div class="row mb-5">
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-hotel"></i>Hotels</a>
+                        <a href="" class="list-group-item"><i class="far fa-plane "></i>Planes</a>
+                        <a href="" class="list-group-item"><i class="far fa-car"></i>Cars</a>
+                    </ul> 
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-question-circle"></i>FAQ</a>
+                        <a href="" class="list-group-item"><i class="far fa-comment-dots fa-flip-horizontal"></i>About Us</a>
+                        <a href="" class="list-group-item"><i class="far fa-file-alt"></i>Terms and condition</a>
+                    </ul> 
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group contact">
+                        <a href="#" class="list-group-item"><i class="far fa-envelope "></i>Hotel@service.com</a>
+                        <a href="#" class="list-group-item"><i class="far fa-phone-alt "></i>+213 698 690 085 </a>
+                    </ul> 
+                </div>
+            </div>
+            <!-- end footer links  -->
+            <div class="horizontalLine"></div>
+            <!-- social network links  -->
+            <div class="d-flex flex-row  justify-content-center align-items-center social-nwk-icon">
+                <div >
+                    <a href="">
+                        <span class="fa-layers fa-fw" >
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-facebook-f" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div >
+                    <a href="">
+                        <span class="fa-layers fa-fw" >
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-instagram" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div >
+                    <a href="">
+                        <span class="fa-layers fa-fw" >
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-twitter" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- end social network links  -->
+            <!-- copyright  -->
+            <div class="row justify-content-center copyright">
+                <div class="col-sm  ">
+                    <a href="" class="list-group-item">All<i class="far fa-copyright icon"></i>AKRAM 2020</a>
+                </div>
+            </div>
+            <!-- end copyright  -->
+        </div>
+
+    </div>
+<!-- end footer  -->
+</body>
+<!-- include js  -->
+<div>
+    
+    <script src="js/all.min.js" data-search-pseudo-elements></script>
+    <script src="js/jq.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/googleMaps.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRbMFZDRco8ITonULW7kRcsO15RD0U80A&callback=initMap">
+    </script>
+    
+</div>
+ 
+
+<script>
+
+</script>
+</html>

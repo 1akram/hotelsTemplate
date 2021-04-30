@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Hotel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <style>
+        .c-navebar {
+            background-color: #fff;
+            border-bottom: .5px solid rgba(0, 0, 0, 0.200);
+            position: relative;
+        }
+        .topbar{
+            background-color: #6695a3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="d-flex c-navebar flex-column ">
+        <!-- topbar -->
+        <div class="topbar d-flex flex-wrap  ">
+          
+            <!-- avatar  -->
+            <div class="item-group mr-auto userAvatar  ">
+                <a class="c-n-item" href="#demo" data-toggle="collapse"><img src="img/avatar.png" alt=""></a>
+                <div class="c-n-i-dropDown collapse" id="demo">
+                    <div class="info">
+                        <a class="list-group-item">
+                            <h4>Akram Ayeb</h4>
+                        </a>
+                        <a class="list-group-item"><small>akram@email.com</small></a>
+                    </div>
+                    <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list1 </a>
+                    <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list2 </a>
+                    <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list5 </a>
+                    <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list4 </a>
+                </div>
+            </div>
+            <!-- end avatar  -->
+            <div class="item-group d-flex align-items-center">
+                <a class="c-n-item" href="#"><i class="far fa-envelope ml-1 mr-1 icon"></i>Hotel@service.com</a>
+            </div>
+            <div class="item-group d-flex align-items-center">
+                <a class="c-n-item" href="#"><i class="far fa-phone-alt ml-1 mr-1 icon"></i>+213 698 690 085</a>
+            </div>
+        </div>
+        <!-- end topbar  -->
+        <div class="d-flex flex-wrap flex-row justify-content-center ">
+            <div class="item-group">
+                <a class="c-n-item" href="Hotels.html "><i class="far fa-home ml-1 mr-1 icon"></i>Home</a>
+            </div>
+            <div class="item-group">
+                <a class="c-n-item" href="# "><i class="far fa-hotel ml-1 mr-1 icon"></i>Hotels</a>
+                <div class="c-n-i-dropDown">
+                    <a href="HotelDetails.html" class="list-group-item"><i class="far fa-hotel icon"></i> Hotel Detils  </a>
+                    <a href="addHotel.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Hotel </a>
+                    <a href="addRoom.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Room </a>
+                </div>
+            </div>
+            <div class="item-group">
+                <a class="c-n-item" href="Account.html"><i class="far fa-user ml-1 mr-1 icon"></i>Account</a>
+            </div>
+          
+        </div>
+    </div>
+    <!-- end navbar  -->
+
+
+
+
+
+    <!-- body -->
+
+    <!--  body -->
+    <div class="container containerCost">
+        <div class="row  ">
+            <div class="row col-sm-8 m-auto log">
+                <form action=" " method="GET" class="w-100 form">
+                    <!-- tab one  -->
+                    <div class="formTab">
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- hotel name  -->
+                                <div class="form-group">
+                                    <label for="hotelName" class="font-weight-bold">Hotel name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your hotel name"
+                                        id="hotelName" name="hotelName">
+                                </div>
+                                <!-- end hotel name  -->
+                                <!-- stars  -->
+                                <div class="mb-5">
+                                    <div class="lable font-weight-bold"> Stars </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="s1" name="stars" value="1" checked>
+                                        <label for="s1">
+                                            <div>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="s2" name="stars" value="2">
+                                        <label for="s2">
+                                            <div>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="s3" name="stars" value="3">
+                                        <label for="s3">
+                                            <div>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="s4" name="stars" value="4">
+                                        <label for="s4">
+                                            <div>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="s5" name="stars" value="5">
+                                        <label for="s5">
+                                            <div>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end stars  -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab one  -->
+                    <!-- tab two -->
+                    <div class="formTab">
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-sm-6">
+                                <!--  contact name  -->
+                                <div class="form-group">
+                                    <label for="contactName" class="font-weight-bold">Contact name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your contact name"
+                                        id="contactName" name="contactName">
+                                </div>
+                                <!-- end contact name  -->
+                                <!--  email    -->
+                                <div class="form-group ">
+                                    <label for="email" class="font-weight-bold">Contact email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your phone number"
+                                        id="email" name="email">
+                                </div>
+                                <!-- end email  -->
+                                <!--  Phone number    -->
+                                <div class="form-group mb-5">
+                                    <label for="phoneNumber" class="font-weight-bold">Contact Phone number</label>
+                                    <input type="text" class="form-control" placeholder="Enter your contact phone number"
+                                        id="phoneNumber" name="phoneNumber">
+                                </div>
+                                <!-- end phone number  -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab two  -->
+                    <!-- tab therr  -->
+                    <div class="formTab">
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-sm-6">
+                                <!-- facility  -->
+                                <div class="filterFacility">
+                                    <div class="lable font-weight-bold" > Facility </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="f1" name="facility" value="Bike" form="searchForm">
+                                        <label for="f1">
+                                            <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="f2" name="facility" value="Bike" form="searchForm">
+                                        <label for="f2">
+                                            <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="f3" name="facility" value="Bike" form="searchForm">
+                                        <label for="f3">
+                                            <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="f4" name="facility" value="Bike" form="searchForm">
+                                        <label for="f4">
+                                            <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="f5" name="facility" value="Bike" form="searchForm">
+                                        <label for="f5">
+                                            <i class="far fa-paw m-1"></i> <span> I have a bike</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- end facility  -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end tab three  -->
+                    <!-- tab four  -->
+                    <div class="formTab">
+                        <!-- cancellation  -->
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group mb-2">
+                                    <label for="cancellation" class="font-weight-bold">Cancellation </label>
+                                    <label for="cancellation"><small> How many days in advance can guests cancel free of charge? </small></label>
+                                    <select id="cancellation" name="cancellation" class="custom-select">
+                                        <option value="1" selected>1 day</option>
+                                        <option value="3">3 days</option>
+                                        <option value="7">7 days</option>
+                                        <option value="15">15 days</option>
+                                      </select>
+                                </div>
+                                <div class="form-group mb-2">
+                                    <label for="payment"><small>or guests will pay 100%</small></label>
+                                    <select id="payment" name="payment" class="custom-select">
+                                        <option value="0" selected>first night</option>
+                                        <option value="1">full stay</option>
+                                      </select>
+                                </div>
+                                <div>
+                                    <p class="cancelalation-note mt-2">
+                                        The guest must cancel <span class="span-one">14 days</span> in advance or pay 100% of the price of <span class="span-two">full stay</span>. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end cancellation  -->
+                    </div>
+                    <!-- end tab four  -->
+                    <!-- tab five  -->
+                    <div class="formTab">
+                        <!-- address  -->
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="address" class="font-weight-bold">Address </label>
+                                    <input type="text" class="form-control " placeholder="Endter your address"
+                                        id="address" name="address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="street" class="font-weight-bold">Street </label>
+                                    <input type="text" class="form-control" placeholder="street" id="route"
+                                        name="street">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="city" class="font-weight-bold">City </label>
+                                    <input type="text" class="form-control" placeholder="city" id="locality"
+                                        name="city">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="state" class="font-weight-bold">State </label>
+                                    <input type="text" class="form-control" placeholder="state"
+                                        id="administrative_area_level_1" name="state">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="zipCode" class="font-weight-bold">Zip Code </label>
+                                    <input type="text" class="form-control" placeholder="Enter your zop code"
+                                        id="postal_code" name="zipCode">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="country" class="font-weight-bold">Country </label>
+                                    <input type="text" class="form-control" placeholder="Enter your country"
+                                        id="country" name="country">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end address  -->
+                    </div>
+                    <!-- end tab five  -->
+                    <!-- tab six  -->
+                    <div class="formTab">
+                        <!-- location  -->
+                        <div class="row mb-3 align-items-center justify-content-center">
+                            <label for="country" class="font-weight-bold mb-3">Select your hotel place in map </label>
+                            <div id="mapContainer" class="w-100">
+                                <div id="map"></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                     <input type="text" class="form-control " 
+                                        id="lat" name="lat" hidden value="">
+                                </div>
+                                <div class="form-group">
+                                     <input type="text" class="form-control"  id="lng"
+                                        name="lng" hidden value="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end location  -->
+                    </div>
+                    <!-- end tab six  -->
+                    <div class="row justify-content-around">
+                        <button type="button" class="btn bg-color-r formPriv">priv</button>
+                        <button type="button" class="btn bg-color-r formNext">next</button>
+                        <button type="submit" class="btn  bg-color-r formBtn">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end body -->
+
+    <!-- footer  -->
+    <div class="footer">
+        <div class="container">
+            <!-- footer links  -->
+            <div class="row mb-5">
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-hotel"></i>Hotels</a>
+                        <a href="" class="list-group-item"><i class="far fa-plane "></i>Planes</a>
+                        <a href="" class="list-group-item"><i class="far fa-car"></i>Cars</a>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-question-circle"></i>FAQ</a>
+                        <a href="" class="list-group-item"><i class="far fa-comment-dots fa-flip-horizontal"></i>About
+                            Us</a>
+                        <a href="" class="list-group-item"><i class="far fa-file-alt"></i>Terms and condition</a>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group contact">
+                        <a href="#" class="list-group-item"><i class="far fa-envelope "></i>Hotel@service.com</a>
+                        <a href="#" class="list-group-item"><i class="far fa-phone-alt "></i>+213 698 690 085 </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- end footer links  -->
+            <div class="horizontalLine"></div>
+            <!-- social network links  -->
+            <div class="d-flex flex-row  justify-content-center align-items-center social-nwk-icon">
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-facebook-f" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-instagram" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-twitter" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- end social network links  -->
+            <!-- copyright  -->
+            <div class="row justify-content-center copyright">
+                <div class="col-sm  ">
+                    <a href="" class="list-group-item">All<i class="far fa-copyright icon"></i>AKRAM 2020</a>
+                </div>
+            </div>
+            <!-- end copyright  -->
+        </div>
+
+    </div>
+    <!-- end footer  -->
+</body>
+<!-- include js  -->
+<div>
+
+    <script src="js/all.min.js" data-search-pseudo-elements></script>
+    <script src="js/jq.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- google Place  -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRbMFZDRco8ITonULW7kRcsO15RD0U80A&libraries=places&callback=initPlace">
+        </script>
+    <script src="js/googlePlace.js"></script>
+    <!-- end google place  -->
+    <script src="js/main.js"></script>
+
+
+</div>
+<script>
+
+
+function initPlace() {
+        $(document).ready(function(){
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: {lat: 59.325, lng: 18.070}
+            });
+            
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: {lat: 59.327, lng: 18.067}
+            });
+            $("#lat").val(marker.position.lat());
+            $("#lng").val(marker.position.lng());
+            marker.addListener('dragend', function(){
+                $("#lat").val(marker.position.lat());
+                $("#lng").val(marker.position.lng());
+            });
+        });
+      }
+    $(document).ready(function(){
+        $(".cancelalation-note").children(".span-one").text($("#cancellation").children("option:selected").text());
+        $(".cancelalation-note").children(".span-two").text($("#payment").children("option:selected").text());
+        $("#cancellation").change(function(){
+            $(".cancelalation-note").children(".span-one").text($("#cancellation").children("option:selected").text());
+        });
+        $("#payment").change(function(){
+            $(".cancelalation-note").children(".span-two").text($("#payment").children("option:selected").text());
+        });
+    });
+</script>
+
+
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Hotel</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+
+
+</head>
+
+<body>
+    <!-- header  -->
+    <div class="header">
+
+
+        <!-- navbar -->
+        <div class="d-flex c-navebar flex-column ">
+            <!-- topbar -->
+            <div class="topbar d-flex flex-wrap  ">
+              
+                <!-- avatar  -->
+                <div class="item-group mr-auto userAvatar  ">
+                    <a class="c-n-item" href="#demo" data-toggle="collapse"><img src="img/avatar.png" alt=""></a>
+                    <div class="c-n-i-dropDown collapse" id="demo">
+                        <div class="info">
+                            <a class="list-group-item">
+                                <h4>Akram Ayeb</h4>
+                            </a>
+                            <a class="list-group-item"><small>akram@email.com</small></a>
+                        </div>
+                        <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list1 </a>
+                        <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list2 </a>
+                        <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list5 </a>
+                        <a href="" class="list-group-item"><i class="far fa-fa-hotel icon"></i>Test dropDown list4 </a>
+                    </div>
+                </div>
+                <!-- end avatar  -->
+                <div class="item-group d-flex align-items-center">
+                    <a class="c-n-item" href="#"><i class="far fa-envelope ml-1 mr-1 icon"></i>Hotel@service.com</a>
+                </div>
+                <div class="item-group d-flex align-items-center">
+                    <a class="c-n-item" href="#"><i class="far fa-phone-alt ml-1 mr-1 icon"></i>+213 698 690 085</a>
+                </div>
+            </div>
+            <!-- end topbar  -->
+            <div class="d-flex flex-wrap flex-row justify-content-center ">
+                <div class="item-group">
+                    <a class="c-n-item" href="Hotels.html "><i class="far fa-home ml-1 mr-1 icon"></i>Home</a>
+                </div>
+                <div class="item-group">
+                    <a class="c-n-item" href="# "><i class="far fa-hotel ml-1 mr-1 icon"></i>Hotels</a>
+                    <div class="c-n-i-dropDown">
+                        <a href="HotelDetails.html" class="list-group-item"><i class="far fa-hotel icon"></i> Hotel Detils  </a>
+                        <a href="addHotel.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Hotel </a>
+                        <a href="addRoom.html" class="list-group-item"><i class="far fa-hotel icon"></i> Add Room </a>
+                    </div>
+                </div>
+                <div class="item-group">
+                    <a class="c-n-item" href="Account.html"><i class="far fa-user ml-1 mr-1 icon"></i>Account</a>
+                </div>
+              
+            </div>
+        </div>
+        <!-- end navbar  -->
+        <div class="headerBG"><img src="img/hotelBG.jpg" alt=""></div>
+    </div>
+    <!-- end header  -->
+
+
+
+    </div>
+
+    <!-- body -->
+    <!-- map  -->
+    <div id="mapContainer" class="collapse">
+        <div id="map"></div>
+    </div>
+    <!-- end map  -->
+    <!--  body -->
+    <div class="container containerCost">
+        <div class="row flex-row-reverse ">
+            <!-- left section  -->
+            <div class="col-md-4  col-sm-12">
+                <div class="map-btn mb-2">
+                    <!-- map btn  -->
+                    <button type="submit" class="btn  bg-color-r" id="map-btn">Map</button>
+                    <!-- end map btn  -->
+                </div>
+                <!-- search -->
+                <div class="Acc searchAcc">
+                    <div class="AccH searchHead d-flex ">
+                        <i class="far fa-search icon-color-red mr-3"></i><span> Check Availability </span>
+                    </div>
+                    <div id="search" class="AccB searchBody show">
+                        <!-- search form  -->
+                        <form accept="#" method="GET" id="searchForm">
+                            <!-- checkIn -->
+                            <div class="lable"><i class="far fa-calendar-alt icon-color-red mr-3"></i> Check In </div>
+                            <div class="input-group">
+                                <input type="date" class="form-control" name="checkIn">
+                            </div>
+                            <!-- end checkIn -->
+                            <!-- checkOut -->
+                            <div class="lable"><i class="far fa-calendar-alt icon-color-red mr-3"></i> Check Out </div>
+                            <div class="input-group  ">
+                                <input type="date" class="form-control" name="checkOut">
+                            </div>
+                            <!-- end checkOut -->
+                            <div class="search-btn">
+                                <!-- search btn  -->
+                                <button type="submit" class="btn mt-3  bg-color-g" id="search-btn"
+                                    form="searchForm">Check now</button>
+                                <!-- end search btn  -->
+                            </div>
+                        </form>
+                        <!-- end search form  -->
+                    </div>
+                </div>
+                <!-- search end -->
+            </div>
+            <!-- end left section  -->
+            <!-- right section  -->
+            <div class="col-md-8 col-sm-12">
+                <!-- gallery  -->
+                <div class="row gallery">
+                    <div id="gallery" class="carousel slide" data-ride="carousel">
+
+                        <ul class="carousel-indicators">
+                            <li data-target="#gallery" data-slide-to="0" class="active"></li>
+                            <li data-target="#gallery" data-slide-to="1"></li>
+                            <li data-target="#gallery" data-slide-to="2"></li>
+                        </ul>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/defualt.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/login-bg.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/hotelBG.jpg">
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-prev" href="#gallery" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#gallery" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- end gallery  -->
+                <!-- description  -->
+                <div class="row description ">
+                    <div class="col ">
+                        <h3>Description</h3>
+                        <p>
+                            this is a demo description this is a demo description this is a demo description this is a
+                            demo description
+                            this is a demo description this is a demo description this is a demo description this is a
+                            demo description
+                            this is a demo description this is a demo description this is a demo description this is a
+                            demo description
+                            this is a demo description this is a demo description this is a demo description
+                            this is a demo description this is a demo description this is a demo description this is a
+                            demo description
+                            this is a demo description this is a demo description this is a demo description this is a
+                            demo description
+                            this is a demo description this is a demo description this is a demo description
+                            this is a demo description this is a demo description
+                        </p>
+                    </div>
+                </div>
+                <!-- end description  -->
+                <!-- facilitys  -->
+                <div>
+                    <h3>Facilitys</h3>
+                    <div class="row  ">
+                        <div class="col">
+                            <ul class="  facilitys">
+                                <li class="list-inline-item">
+                                    <i class="far fa-wifi color-r"></i>
+                                    <span class="d-block">Free Wifi</span>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-wifi color-r"></i>
+                                    <span class="d-block">Free Wifi</span>
+                                </li>
+                                <li class="list-inline-item  ">
+                                    <i class="far fa-wifi color-r"></i>
+                                    <span class="d-block">Free Wifi Free Wifi</span>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-wifi color-r"></i>
+                                    <span class="d-block">Free Wifi</span>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="far fa-wifi color-r"></i>
+                                    <span class="d-block">Free Wifi</span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end facilitys  -->
+                <!-- room types  -->
+                <div class="roomTypes">
+                    <h3>Rooms</h3>
+                    <div class="row rooms ">
+                        <div class="col">
+                            <table class="table  table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Room</th>
+                                        <th>Guests</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- room  -->
+                                    <tr>
+                                        <td>
+                                            <div class="roomName">room type name</div>
+                                            <div class="roomBeds">
+                                                <span><i class="far fa-bed color-r"></i>x3</span>
+                                                <span><i class="far fa-bed-alt color-r"></i>x1</span>
+                                                <span><i class="far fa-couch color-r"></i>x1</span>
+                                            </div>
+                                            <div class="roomAmenities">
+                                                <ul>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-bed-alt color-r"></i>wifi fre sd dsf e get
+                                                            it </span></li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi fresdfqsdf qsf gq
+                                                            sf qfgs e get it </span></li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="roomGuests">
+                                                <span><i class="far fa-user-times color-r"></i> 6</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="roomNumbers row">
+                                                <div class="col-sm-3">
+                                                    <i class="far fa-door-open color-r"></i>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <select name="ldsf" id="d">
+                                                        <option value="0">0</option>
+                                                        <option value="0">1</option>
+                                                        <option value="0">2</option>
+                                                        <option value="0">3</option>
+                                                        <option value="0">4</option>
+                                                    </select>
+                                                </div>
+                                                <div col-sm-12 id="total">
+                                                    <span>120</span>
+                                                    <span class="fa-layers icon-color-red">
+                                                        <i class="fas fa-circle"></i>
+                                                        <i class="fa-inverse far fa-dollar-sign"
+                                                            data-fa-transform="shrink-5"></i>
+                                                    </span>
+                                                    <span class="d-block"><small>for 10 night</small></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="roomReserv">
+                                                <a href="" class="bg-color-g">reservation</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- end room  -->
+
+
+                                    <!-- ************************  -->
+
+
+                                    <tr>
+                                        <td>
+                                            <div class="roomName">room type name</div>
+                                            <div class="roomBeds">
+                                                <span><i class="far fa-bed color-r"></i>x2</span>
+                                                <span><i class="far fa-bed-alt color-r"></i>x1</span>
+                                                <span><i class="far fa-couch color-r"></i>x6</span>
+                                            </div>
+                                            <div class="roomAmenities">
+                                                <ul>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-bed-alt color-r"></i>wifi fre sd dsf e get
+                                                            it </span></li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi fresdfqsdf qsf gq
+                                                            sf qfgs e get it </span></li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                    <li class="list-inline-item"><span><i
+                                                                class="far fa-wifi color-r"></i>wifi free get it </span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="roomGuests">
+                                                <span><i class="far fa-user-times color-r"></i> 4</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="roomNumbers row">
+                                                <div class="col-sm-3">
+                                                    <i class="far fa-door-open color-r"></i>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <select name="ldsf" id="d">
+                                                        <option value="0">0</option>
+                                                        <option value="0">1</option>
+                                                        <option value="0">2</option>
+                                                        <option value="0">3</option>
+                                                        <option value="0">4</option>
+                                                    </select>
+                                                </div>
+                                                <div col-sm-12 id="total">
+                                                    <span>1500</span>
+                                                    <span class="fa-layers icon-color-red">
+                                                        <i class="fas fa-circle"></i>
+                                                        <i class="fa-inverse far fa-dollar-sign"
+                                                            data-fa-transform="shrink-5"></i>
+                                                    </span>
+                                                    <span class="d-block"><small>for 30 night</small></span>
+                                                </div>
+
+                                            </div>
+                                            <div class="roomReserv">
+                                                <a href="" class="bg-color-g">reservation</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                    <!-- ********************** -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- end room types  -->
+                <!-- reviews  -->
+                <div class="row reviews">
+                    <div class="col-sm-12">
+                        <div class="scores d-flex align-items-center">
+                            <div class="mr-auto">
+                                <h3>Reviews</h3>
+                            </div>
+                            <span class=" score fa-layers fa-fw d-inline-block ">
+                                <i class="far fa-circle color-r"></i>
+                                <span class="fa-layers-text  " data-fa-transform="shrink-11 ">8.5</span>
+                            </span>
+                            <span class=" ">15050 review </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 review">
+                        <div>
+                            <div class="reviewHead">
+                                <a href="#"><img src="img/avatar.png" alt=""></a>
+                                <h3>name here now</h3>
+                                <div class="date"><small>jan-29-1999</small></div>
+                            </div>
+                            <p>
+                                sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf msdf
+                                msdhf
+                                sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf
+                                msdf
+                                msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf
+                                ksdhf
+                                msdf msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh
+                                msdf
+                                ksdhf msdf msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh
+                                dsdfh
+                                msdf ksdhf msdf msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm
+                                sqmfh
+                                sdh
+                                dsdfh msdf ksdhf msdf msdhf sdhfl
+
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- end reviews  -->
+
+
+
+
+                    <!-- ***********************************************
+                        ***************************************************** -->
+                    <div class="col-sm-12 review">
+                        <div>
+                            <div class="reviewHead">
+                                <a href="#"><img src="img/avatar.png" alt=""></a>
+                                <h3>name here now</h3>
+                                <div class="date"><small>jan-29-1999</small></div>
+                            </div>
+                            <p>
+                                sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf msdf
+                                msdhf
+                                sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf
+                                msdf
+                                msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf
+                                ksdhf
+                                msdf msdhf sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 review">
+                        <div>
+                            <div class="reviewHead">
+                                <a href="#"><img src="img/avatar.png" alt=""></a>
+                                <h3>name here now</h3>
+                                <div class="date"><small>jan-29-1999</small></div>
+                            </div>
+                            <p>
+                                sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf msdf
+                                msdhf
+                                sdhfl sdfl lsflk qsl l lsdfjlmjf mlks dfdshf sskdh ksqd sdhfm sqmfh sdh dsdfh msdf ksdhf
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- ****************************************** -->
+                    <!-- ***************************************** -->
+
+
+
+
+                    <!-- review text area -->
+                    <div class="col-sm-12 review">
+                        <div>
+                            <div class="reviewHead">
+                                <a href="#"><img src="img/avatar.png" alt=""></a>
+                                <h3>name here now</h3>
+                            </div>
+                            <form class="form flex-column" action="">
+                                <textarea name="review" id="review" rows="4"></textarea>
+                                <button class="btn bg-color-g">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- end text area  -->
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+            <!-- end right section  -->
+        </div>
+    </div>
+    <!-- end body -->
+
+    <!-- footer  -->
+    <div class="footer">
+        <div class="container">
+            <!-- footer links  -->
+            <div class="row mb-5">
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-hotel"></i>Hotels</a>
+                        <a href="" class="list-group-item"><i class="far fa-plane "></i>Planes</a>
+                        <a href="" class="list-group-item"><i class="far fa-car"></i>Cars</a>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group">
+                        <a href="" class="list-group-item"><i class="far fa-question-circle"></i>FAQ</a>
+                        <a href="" class="list-group-item"><i class="far fa-comment-dots fa-flip-horizontal"></i>About
+                            Us</a>
+                        <a href="" class="list-group-item"><i class="far fa-file-alt"></i>Terms and condition</a>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-2">
+                    <ul class="list-group contact">
+                        <a href="#" class="list-group-item"><i class="far fa-envelope "></i>Hotel@service.com</a>
+                        <a href="#" class="list-group-item"><i class="far fa-phone-alt "></i>+213 698 690 085 </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- end footer links  -->
+            <div class="horizontalLine"></div>
+            <!-- social network links  -->
+            <div class="d-flex flex-row  justify-content-center align-items-center social-nwk-icon">
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-facebook-f" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-instagram" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+                <div>
+                    <a href="">
+                        <span class="fa-layers fa-fw">
+                            <i class="far fa-circle "></i>
+                            <i class="fa-inverse fab fa-twitter" data-fa-transform="shrink-7 "></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- end social network links  -->
+            <!-- copyright  -->
+            <div class="row justify-content-center copyright">
+                <div class="col-sm  ">
+                    <a href="" class="list-group-item">All<i class="far fa-copyright icon"></i>AKRAM 2020</a>
+                </div>
+            </div>
+            <!-- end copyright  -->
+        </div>
+
+    </div>
+    <!-- end footer  -->
+</body>
+<!-- include js  -->
+<div>
+
+    <script src="js/all.min.js" data-search-pseudo-elements></script>
+    <script src="js/jq.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/googleMaps.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRbMFZDRco8ITonULW7kRcsO15RD0U80A&callback=initMap">
+        </script>
+
+</div>
+
+</html>
